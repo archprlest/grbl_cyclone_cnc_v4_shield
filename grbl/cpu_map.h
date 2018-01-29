@@ -154,7 +154,7 @@
   #define SERIAL_RX     USART_RX_vect
   #define SERIAL_UDRE   USART_UDRE_vect
 
-  // Define step pulse output pins. NOTE: All step bit pins must be on the same port.
+  // Define step pulse output pins. NOTE: All step bit pins must be on the same port. The x, y, z, step pin are swaped with the direction pin on the cnc shield v4
   #define STEP_DDR        DDRD
   #define STEP_PORT       PORTD
   #define X_STEP_BIT      5  // Uno Digital Pin 5
