@@ -493,7 +493,10 @@
 #ifdef DEFAULTS_CYCLONE
   // Description: GRBL settings for Cyclone PCB Factory v2.1
   // http://reprap.org/wiki/Cyclone_PCB_Factory
-  #define MICROSTEPS 16 // 16 --> all three jumpers installed
+  // Do to an error in the CNC Shield v4 board I have and that many that I seen on the internet have a error in the PCB where the
+  // microstep jumps are connected to ground and not to the 5v like they should be. To enable microsteping you need to remove the jumpers and
+  // connect the microstep pins to the 5v.  This can quickly be done with some pair hookup wire and soilder.
+  #define MICROSTEPS 16 // 16 --> all three jumpers removed and the microstep pin have been shorted to the 5v on the board
   #define STEPS_PER_REV 200.0
   #define MM_PER_REV 1.25 // 1.25 mm/rev leadscrew
   #define Cyclone_XY_Gear_Ratio 21.0/21.0 // Number of gear teeth (motor/rod)
@@ -528,6 +531,8 @@
   #define DEFAULT_HOMING_SEEK_RATE 500.0 // mm/min (will saturate to MAX_RATE)
   #define DEFAULT_HOMING_DEBOUNCE_DELAY 250 // msec (0-65k)
   #define DEFAULT_HOMING_PULLOFF 1.0 // mm
+
+ #define HOMING_FORCE_SET_ORIGIN // taken from the config.h as this is related to the set up of each cnc machine 
 
 #endif
 

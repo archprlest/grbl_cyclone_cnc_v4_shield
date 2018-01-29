@@ -34,8 +34,11 @@
 // NOTE: OEMs can avoid the need to maintain/update the defaults.h and cpu_map.h files and use only
 // one configuration file by placing their specific defaults and pin map at the bottom of this file.
 // If doing so, simply comment out these two defines and see instructions below.
-#define DEFAULTS_GENERIC
-#define CPU_MAP_ATMEGA328P // Arduino Uno CPU
+//#define DEFAULTS_GENERIC
+#define DEFAULTS_CYCLONE
+
+//#define CPU_MAP_ATMEGA328P // Arduino Uno CPU
+#define CPU_MAP_CNC_SHIELD_V4 // Arudino Nano CNC Shield v4
 
 // Serial baud rate
 // #define BAUD_RATE 230400
@@ -126,7 +129,9 @@
 // After homing, Grbl will set by default the entire machine space into negative space, as is typical
 // for professional CNC machines, regardless of where the limit switches are located. Uncomment this
 // define to force Grbl to always set the machine origin at the homed location despite switch orientation.
-// #define HOMING_FORCE_SET_ORIGIN // Uncomment to enable.
+// added to the default.h as this is a setting of the machine 
+//#define HOMING_FORCE_SET_ORIGIN // Uncomment to enable.
+
 
 // Number of blocks Grbl executes upon startup. These blocks are stored in EEPROM, where the size
 // and addresses are defined in settings.h. With the current settings, up to 2 startup blocks may

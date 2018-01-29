@@ -1,6 +1,6 @@
 ![GitHub Logo](https://github.com/gnea/gnea-Media/blob/master/Grbl%20Logo/Grbl%20Logo%20250px.png?raw=true) for Cyclone PCB Factory using CNC v4
 
-Grbl is a no-compromise, high performance, low cost alternative to parallel-port-based motion control for CNC milling. This version of Grbl runs is use on the Cyclone PCB Factory with a Arudino Nano using the CNC Shield v4. 
+Grbl is a no-compromise, high performance, low cost alternative to parallel-port-based motion control for CNC milling. This version of Grbl is use on the Cyclone PCB Factory with a Arudino Nano using the CNC Shield v4. 
 
 The controller is written in highly optimized C utilizing every clever feature of the AVR-chips to achieve precise timing and asynchronous operation. It is able to maintain up to 30kHz of stable, jitter free control pulses.
 
